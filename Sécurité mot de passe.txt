@@ -5,7 +5,6 @@ def mdp_bon(psw):
     if len(psw)<8:
         return "veuillez ecrire votre mot de passe plus long"
     elif not any(char.isupper() for char in psw):
-        c=c+1
         return "Il faut au moins 1 majuscule"
     elif not any(char.islower() for char in psw):
         return "om faut au moins 1 minuscule"
