@@ -1,0 +1,18 @@
+from string import punctuation
+import string
+set(punctuation)
+def mdp_bon(psw):
+    if len(psw)<8:
+        return "veuillez ecrire votre mot de passe plus long"
+    elif not any(char.isupper() for char in psw):
+        c=c+1
+        return "Il faut au moins 1 majuscule"
+    elif not any(char.islower() for char in psw):
+        return "om faut au moins 1 minuscule"
+    elif not any(char in string.punctuation for char in psw):
+        return "il faut au moins 1 caractere special"
+    elif not any(char.isdigit()for char in psw):
+        return "Minimum 1 chiffre"
+    else:
+        return "CODE BON"
+print(mdp_bon("fdDnfef9e@"))
